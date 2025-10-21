@@ -4,7 +4,7 @@ autoinstall:
   identity:
     hostname: PC
     username: Lanti
-    password: "$6$abcd1234$XyZ....restoDeLaCadena"  # reemplazar con tu salida de openssl
+    password: "$6$dSwUJsQ7.wEeRJia$35gD/AgLZ6/mOGH/oy6JN.FAutaK.XPGUXLGybALnAMLdFHtMCGz48aMfHudVhvJMctc1PEfDh6dkIafR8Sdi."
   locale: es_ES.UTF-8
   keyboard:
     layout: es
