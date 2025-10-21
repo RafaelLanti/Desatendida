@@ -1,0 +1,31 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: PC
+    username: Lanti
+    password: "$6$abcd1234$XyZ....restoDeLaCadena"  # reemplazar con tu salida de openssl
+  locale: es_ES.UTF-8
+  keyboard:
+    layout: es
+    variant: ''
+  timezone: Europe/Madrid
+  network:
+    network:
+      version: 2
+      ethernets:
+        enp0s3:
+          dhcp4: true
+  storage:
+    layout:
+      name: lvm
+  ssh:
+    install-server: true
+    allow-pw: true
+  packages:
+    - vim
+    - curl
+    - git
+  late-commands:
+    - curtin in-target --target=/target systemctl enable ssh
+    - curtin in-target --target=/target systemctl start ssh
